@@ -9,4 +9,16 @@ jobs :
     runs-on : ubuntu-latest
     steps :
       - uses : actions/checkout@v3
+#        - 체크 아웃: 내 브렌치로 와서 작업 할 수 있도록 도와주는 명령어
+      - uses : actions/setup-node@v3
+        with :
+          node-version : 18.7.0
+          cash : npm
       - run : npm ci
+      - run : npm test
+      - run : npm run build
+#      - name: Deploy
+#          uses: peaceiris/actions-gh-pages@v3
+#          with:
+#            github_token: ${{ secrets.GITHUB_TOKEN }}
+#            publish_dir: ./public
