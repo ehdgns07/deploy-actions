@@ -22,4 +22,4 @@ jobs :
         with:
           github_token: ${{ secrets.DEPLOY_TOKEN }}
 #           secrets에 등록하지 않아도 PAT에서 같은 이름으로 등록하면 동작할 수 있다
-          publish_dir: ./public
+          publish_dir: ./build
